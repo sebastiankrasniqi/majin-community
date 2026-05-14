@@ -101,6 +101,8 @@ nav {
     max-width: 900px;
     margin: 120px auto 60px auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 10;
 }
 
 /* Neon Boxen Design */
@@ -427,6 +429,29 @@ ul li::before {
 .neon-box.fade-in-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* --- Digitaler Cyberpunk-Hintergrund (Majin Style) --- */
+.cyber-background-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(10, 10, 12, 0.9), rgba(10, 10, 12, 0.95)),
+        radial-gradient(circle at 50% 50%, rgba(255, 0, 60, 0.15) 0%, transparent 80%),
+        linear-gradient(90deg, rgba(255, 0, 60, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(255, 0, 60, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    animation: backgroundPulse 8s infinite ease-in-out;
+}
+
+@keyframes backgroundPulse {
+    0% { transform: scale(1); filter: hue-rotate(0deg); }
+    50% { transform: scale(1.02); filter: hue-rotate(-10deg); }
+    100% { transform: scale(1); filter: hue-rotate(0deg); }
 }
 
 /* Responsive Anpassung für Smartphones */
