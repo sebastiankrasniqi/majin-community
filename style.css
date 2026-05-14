@@ -1,4 +1,4 @@
-/* Google Fonts repariert für das fehlerfreie Laden des Cyberpunk-Looks */
+/* Google Fonts für das Laden des Cyberpunk-Looks */
 @import url('https://googleapis.com');
 
 :root {
@@ -386,7 +386,7 @@ ul li::before {
     text-align: center;
 }
 
-/* REPARIERT: Element vollständig wiederhergestellt */
+/* REPARIERT: Element vollständig wiederhergestellt und geschlossen */
 .discord-btn {
     display: inline-flex;
     align-items: center;

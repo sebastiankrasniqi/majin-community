@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Majin Community</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Reparierter FontAwesome Link für funktionierende Icons -->
+    <!-- REPARIERT: Funktionierender FontAwesome Link für alle Icons -->
     <link rel="stylesheet" href="cloudflare.com">
 </head>
 <body>
@@ -44,22 +44,22 @@
         <section id="regeln" class="neon-box">
             <h2><i class="fa-solid fa-gavel text-red"></i> Das Regelwerk</h2>
             <div class="rules-wrapper">
-                <div class="rule-category"><h3>Allgemeines</h3><ul><li>Der Nachname <span class="highlight-white">„Majin"</span> ist exklusiv für Mitglieder, die offiziell vom Clan anerkannt wurden.</li></ul></div>
+                <div class="rule-category"><h3>Allgemeines</h3><ul><li>Der Nachname <span class="highlight-white">„Majin"</span> ist exklusiv für Mitglieder, die officially vom Clan anerkannt wurden.</li></ul></div>
                 <div class="rule-category"><h3>Bewerbungsprozess</h3><p>Jeder Spieler, der den Nachnamen „Majin" tragen möchte, muss sich schriftlich beim Clan bewerben.</p></div>
                 <div class="rule-category"><h3>Verhalten & Pflichten</h3><p>Mitglieder mit dem Nachnamen „Majin“ müssen sich loyal gegenüber dem Clan verhalten.</p></div>
                 <div class="rule-category"><h3>Sicherheit & Verbote</h3><ul class="danger-list"><li><i class="fa-solid fa-ban"></i> Kein Leaking</li></ul></div>
             </div>
         </section>
 
+        <!-- Discord Sektion mit modernem Crate Chat-System -->
         <section id="discord" class="neon-box cta-section">
             <h2>Tritt unserem Live-Chat bei!</h2>
-            <!-- REPARIERT: Vollständige Web-Adresse für das WidgetBot-Fenster -->
-            <iframe src="widgetbot.io" allow="clipboard-write; fullscreen" height="500" width="100%" style="border: 1px solid var(--border-color); border-radius: 4px; margin-top: 20px; box-shadow: 0 0 15px var(--neon-red-glow);"></iframe>
+            <p class="intro-p">Nutze den schwebenden Chat-Button unten rechts auf der Website oder klicke auf den Button, um direkt unserem Server beizutreten!</p>
             <a href="https://discord.gg/XM9CXWH9rr" target="_blank" class="discord-btn" style="margin-top: 25px;"><i class="fa-brands fa-discord"></i> Majin Discord joinen!</a>
         </section>
     </main>
 
-    <!-- Der neue gewünschte Textbereich am Ende der Seite -->
+    <!-- Gewünschter Textbereich am Ende der Seite -->
     <footer class="majin-footer">
         <div class="footer-title">MAJIN</div>
         <div class="footer-subtitle">MAJIN COMMUNITY</div>
@@ -70,6 +70,14 @@
             <a href="discord.com" target="_blank">Discord Guidelines</a>
         </div>
     </footer>
+
+    <!-- REPARIERT: Aktiviert das fehlerfreie schwebende WidgetBot Crate System mit Ihren IDs -->
+    <script src="jsdelivr.net" async defer>
+        new Crate({
+            server: '1415509174065958964', // Majin Community Server ID
+            channel: '1415563008989466644' // Livechat Kanal ID
+        })
+    </script>
 
     <script src="script.js"></script>
 </body>
