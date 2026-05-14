@@ -1,4 +1,4 @@
-/* Google Fonts für das Laden des Cyberpunk-Looks */
+/* Google Fonts für das fehlerfreie Laden des Cyberpunk-Looks */
 @import url('https://googleapis.com');
 
 :root {
@@ -136,6 +136,9 @@ nav {
     object-fit: cover;
     border: 2px solid var(--neon-red);
     box-shadow: 0 0 15px var(--neon-red);
+    /* REPARIERT: Entfernt den weißen Kasten eines JPG-Logos auf dunklem Hintergrund */
+    mix-blend-mode: screen;
+    background-color: transparent;
 }
 
 /* Discord Live-Zähler Design */
