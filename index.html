@@ -10,10 +10,13 @@
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation mit Mini-Logo -->
     <nav>
         <div class="nav-container">
-            <span class="logo">MAJIN</span>
+            <span class="logo">
+                <img src="nav-logo.png" alt="" class="nav-mini-logo">
+                MAJIN
+            </span>
             <div class="nav-links">
                 <a href="#ueber-uns"><i class="fa-solid fa-users"></i> Über uns</a>
                 <a href="#team"><i class="fa-solid fa-shield-halved"></i> Team</a>
@@ -25,12 +28,19 @@
 
     <main class="content-wrapper">
 
-        <!-- Über uns mit integriertem Server-Logo -->
+        <!-- Über uns mit integriertem Server-Logo und Discord Zähler -->
         <section id="ueber-uns" class="neon-box">
             <!-- Platzhalter für das Haupt-Serverlogo -->
             <div class="server-logo-container">
                 <img src="server-logo.png" alt="Majin Community Logo" class="server-logo">
             </div>
+
+            <!-- Discord Live-Zähler Box -->
+            <div class="discord-counter-box">
+                <span class="online-indicator"></span>
+                <span id="discord-online-text">Lade Live-Status...</span>
+            </div>
+
             <h1>Willkommen bei der <span class="highlight-text">Majin Community!</span></h1>
             <p>Die Majin Community ist ein Clan mit klaren Regeln, Respekt und starkem Zusammenhalt. Unser Ziel ist es, ein konsistentes, glaubwürdiges und respektvolles Auftreten in allen unterstützten Spielen zu gewährleisten.</p>
         </section>
@@ -47,11 +57,18 @@
                     <span class="name">Sebastian</span>
                 </div>
 
-                <!-- Communityverwaltung: Zarplix (Aktualisiert von Azul) -->
+                <!-- Communityverwaltung: Zarplix -->
                 <div class="team-card manager">
                     <img src="zarplix.png" alt="Zarplix Avatar" class="team-avatar">
                     <span class="rank">⚙️ Communityverwaltung</span>
                     <span class="name">Zarplix</span>
+                </div>
+
+                <!-- Staff: Snow -->
+                <div class="team-card staff">
+                    <img src="snow.png" alt="Snow Avatar" class="team-avatar">
+                    <span class="rank">🛡️ Staff</span>
+                    <span class="name">Snow</span>
                 </div>
 
             </div>
@@ -115,14 +132,24 @@
             </div>
         </section>
 
-        <!-- Discord -->
+        <!-- Discord mit eingebettetem WidgetBot Live-Chat -->
         <section id="discord" class="neon-box cta-section">
-            <h2>Stelle einen Antrag, um beizutreten!</h2>
-            <a href="https://discord.gg/XM9CXWH9rr" target="_blank" class="discord-btn">
+            <h2>Tritt unserem Live-Chat bei!</h2>
+
+            <!-- WidgetBot Integration mit Ihrer Server-ID und Ihrer exakten Livechat-Kanal-ID -->
+            <iframe src="widgetbot.io"
+                    height="500"
+                    width="100%"
+                    style="border: 1px solid var(--border-color); border-radius: 4px; margin-top: 20px; box-shadow: 0 0 15px var(--neon-red-glow);">
+            </iframe>
+
+            <a href="https://discord.gg/XM9CXWH9rr" target="_blank" class="discord-btn" style="margin-top: 25px;">
                 <i class="fa-brands fa-discord"></i> Majin Discord joinen!
             </a>
         </section>
     </main>
 
+    <!-- Verknüpfung der Skriptdatei -->
+    <script src="script.js"></script>
 </body>
 </html>

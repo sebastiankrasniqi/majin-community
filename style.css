@@ -1,4 +1,4 @@
-/* Google Font laden für den futuristischen Look */
+/* Google Fonts laden für den futuristischen Look */
 @import url('googleapis.com');
 
 :root {
@@ -61,6 +61,7 @@ nav {
     padding: 15px 20px;
 }
 
+/* Flexbox für das Logo oben links */
 .logo {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
@@ -68,6 +69,17 @@ nav {
     color: var(--text-white);
     text-shadow: 0 0 10px var(--neon-red);
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling für das Mini-Logo oben links */
+.nav-mini-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px var(--neon-red));
 }
 
 .nav-links a {
@@ -109,7 +121,7 @@ nav {
     border-color: rgba(255, 0, 60, 0.4);
 }
 
-/* NEU: Server Logo Styling im Über-Uns Block */
+/* Server Logo Styling im Über-Uns Block */
 .server-logo-container {
     margin-bottom: 25px;
     text-align: center;
@@ -122,6 +134,37 @@ nav {
     object-fit: cover;
     border: 2px solid var(--neon-red);
     box-shadow: 0 0 15px var(--neon-red);
+}
+
+/* Discord Live-Zähler Design */
+.discord-counter-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 0, 60, 0.05);
+    border: 1px solid rgba(255, 0, 60, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.online-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #23a55a; /* Discord Online-Grün */
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #23a55a;
+    animation: blinkIndicator 2s infinite;
+}
+
+@keyframes blinkIndicator {
+    0% { opacity: 0.4; box-shadow: 0 0 4px #23a55a; }
+    50% { opacity: 1; box-shadow: 0 0 10px #23a55a; }
+    100% { opacity: 0.4; box-shadow: 0 0 4px #23a55a; }
 }
 
 /* Überschriften */
@@ -198,10 +241,12 @@ h3 {
     height: 3px;
 }
 
+/* Akzentleisten über den Team-Karten */
 .team-card.owner::before { background: var(--neon-red); box-shadow: 0 0 10px var(--neon-red); }
 .team-card.manager::before { background: var(--text-white); box-shadow: 0 0 10px rgba(255,255,255,0.5); }
+.team-card.staff::before { background: #3498db; box-shadow: 0 0 10px #3498db; } /* Blau für Staff */
 
-/* NEU: Team Avatar Bilder-Styling */
+/* Team Avatar Bilder-Styling */
 .team-avatar {
     width: 90px;
     height: 90px;
@@ -212,15 +257,9 @@ h3 {
     transition: transform 0.3s ease;
 }
 
-.team-card.owner .team-avatar {
-    border-color: var(--neon-red);
-    box-shadow: 0 0 10px rgba(255, 0, 60, 0.3);
-}
-
-.team-card.manager .team-avatar {
-    border-color: var(--text-white);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
+.team-card.owner .team-avatar { border-color: var(--neon-red); box-shadow: 0 0 10px rgba(255, 0, 60, 0.3); }
+.team-card.manager .team-avatar { border-color: var(--text-white); box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+.team-card.staff .team-avatar { border-color: #3498db; box-shadow: 0 0 10px rgba(52, 152, 219, 0.2); }
 
 .team-card:hover .team-avatar {
     transform: scale(1.05);
@@ -376,6 +415,18 @@ ul li::before {
     0% { box-shadow: 0 0 15px var(--neon-red-glow); }
     50% { box-shadow: 0 0 25px rgba(255, 0, 60, 0.9); }
     100% { box-shadow: 0 0 15px var(--neon-red-glow); }
+}
+
+/* --- Scroll-Animationen (JS gesteuert) --- */
+.neon-box.fade-in-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.neon-box.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive Anpassung für Smartphones */
