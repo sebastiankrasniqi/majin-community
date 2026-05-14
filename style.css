@@ -1,5 +1,5 @@
-/* Google Fonts laden für den futuristischen Look */
-@import url('googleapis.com');
+/* Google Fonts repariert für das fehlerfreie Laden des Cyberpunk-Looks */
+@import url('https://googleapis.com');
 
 :root {
     --bg-dark: #0a0a0c;
@@ -386,6 +386,7 @@ ul li::before {
     text-align: center;
 }
 
+/* REPARIERT: Element vollständig wiederhergestellt */
 .discord-btn {
     display: inline-flex;
     align-items: center;
@@ -431,7 +432,7 @@ ul li::before {
     transform: translateY(0);
 }
 
-/* --- REPARIERT: Digitaler Cyberpunk-Hintergrund (Majin Style) --- */
+/* --- Digitaler Cyberpunk-Hintergrund (Majin Style) --- */
 .cyber-background-grid {
     position: fixed;
     top: 0;
@@ -452,6 +453,51 @@ ul li::before {
     0% { transform: scale(1); filter: hue-rotate(0deg); }
     50% { transform: scale(1.02); filter: hue-rotate(-10deg); }
     100% { transform: scale(1); filter: hue-rotate(0deg); }
+}
+
+/* --- Styling für das neue Majin Footer-Design --- */
+.majin-footer {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background: rgba(18, 18, 22, 0.6);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--text-white);
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--neon-red);
+    margin-bottom: 5px;
+}
+
+.footer-subtitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--neon-red);
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-copyright {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 15px;
+    color: var(--text-gray);
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.majin-footer .legal-links {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* Responsive Anpassung für Smartphones */
