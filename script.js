@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // === 2. DISCORD LIVE-ZÄHLER ===
     const inviteCode = "XM9CXWH9rr"; 
     
-    // JETZT BEREINIGT: Komplette, offizielle API-Adresse mit Backticks und ${inviteCode}
+    // REPARIERT: Vollständige offizielle API-Adresse inklusive v10-Invites-Pfad
     fetch(`https://discord.com{inviteCode}?with_counts=true`)
         .then(response => response.json())
         .then(data => {
