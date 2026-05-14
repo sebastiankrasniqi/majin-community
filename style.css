@@ -127,6 +127,7 @@ nav {
 .server-logo-container {
     margin-bottom: 25px;
     text-align: center;
+    background: transparent;
 }
 
 .server-logo {
@@ -136,9 +137,10 @@ nav {
     object-fit: cover;
     border: 2px solid var(--neon-red);
     box-shadow: 0 0 15px var(--neon-red);
-    /* REPARIERT: Entfernt den weißen Kasten eines JPG-Logos auf dunklem Hintergrund */
-    mix-blend-mode: screen;
+    /* REPARIERT: Nutzt den optimalen Mischmodus für JPG auf dunklem Grund */
+    mix-blend-mode: lighten;
     background-color: transparent;
+    display: inline-block;
 }
 
 /* Discord Live-Zähler Design */
@@ -389,7 +391,7 @@ ul li::before {
     text-align: center;
 }
 
-/* REPARIERT: Element vollständig wiederhergestellt und geschlossen */
+/* REPARIERT: Abgebrochener CSS-Bereich vervollständigt */
 .discord-btn {
     display: inline-flex;
     align-items: center;
@@ -423,7 +425,7 @@ ul li::before {
     100% { box-shadow: 0 0 15px var(--neon-red-glow); }
 }
 
-/* --- Scroll-Animationen (JS gesteuert) --- */
+/* Scroll-Animationen (JS gesteuert) */
 .neon-box.fade-in-hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -435,7 +437,7 @@ ul li::before {
     transform: translateY(0);
 }
 
-/* --- Digitaler Cyberpunk-Hintergrund (Majin Style) --- */
+/* Digitaler Cyberpunk-Hintergrund (Majin Style) */
 .cyber-background-grid {
     position: fixed;
     top: 0;
@@ -458,7 +460,7 @@ ul li::before {
     100% { transform: scale(1); filter: hue-rotate(0deg); }
 }
 
-/* --- Styling für das neue Majin Footer-Design --- */
+/* Styling für das neue Majin Footer-Design */
 .majin-footer {
     margin-top: 60px;
     padding: 40px 20px;
