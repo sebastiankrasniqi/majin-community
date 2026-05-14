@@ -431,7 +431,7 @@ ul li::before {
     transform: translateY(0);
 }
 
-/* --- Digitaler Cyberpunk-Hintergrund (Majin Style) --- */
+/* --- REPARIERT: Digitaler Cyberpunk-Hintergrund (Majin Style) --- */
 .cyber-background-grid {
     position: fixed;
     top: 0;
